@@ -1,10 +1,13 @@
 
-package com.example.interview.models;
+package com.example.interview.data.doctor;
+
+import androidx.room.Entity;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+
 
 public class Doctor implements Serializable {
 

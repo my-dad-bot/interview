@@ -6,6 +6,7 @@ import com.example.interview.core.base.BaseApplication;
 import com.example.interview.core.di.builder.ActivityBuilder;
 import com.example.interview.core.di.modules.AppModule;
 import com.example.interview.core.di.modules.NetworkModule;
+import com.example.interview.core.di.modules.RoomModule;
 
 import javax.inject.Singleton;
 
@@ -20,8 +21,8 @@ import dagger.android.support.AndroidSupportInjectionModule;
                 AndroidSupportInjectionModule.class,
                 AppModule.class,
                 NetworkModule.class,
-                ActivityBuilder.class
-
+                ActivityBuilder.class,
+                RoomModule.class
         }
 )
 public interface BaseComponent extends AndroidInjector<BaseApplication> {

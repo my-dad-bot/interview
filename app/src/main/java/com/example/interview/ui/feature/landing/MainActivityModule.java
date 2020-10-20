@@ -18,7 +18,7 @@ public class MainActivityModule {
     }
 
     @Provides
-    CompositeDisposable procideLoginFragmentCompositeDisposal() {
+    CompositeDisposable provideCompositeDisposal() {
         return new CompositeDisposable();
     }
 
@@ -30,5 +30,10 @@ public class MainActivityModule {
     @Provides
     MainActivityViewModel provideMainActivityViewModel(MainActivityRepository repository) {
         return new MainActivityViewModel(repository);
+    }
+
+    @Provides
+    DoctorAdapter provideAdapter(){
+        return new DoctorAdapter();
     }
 }

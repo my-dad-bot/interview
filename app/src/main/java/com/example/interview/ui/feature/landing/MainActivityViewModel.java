@@ -3,7 +3,7 @@ package com.example.interview.ui.feature.landing;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.interview.models.DoctorResponse;
+import com.example.interview.data.doctor.DoctorResponse;
 
 import javax.inject.Inject;
 
@@ -23,7 +23,7 @@ public class MainActivityViewModel extends ViewModel {
         repository.onClearDisposable();
     }
 
-    void getResult() {
-        apiResponseLiveData = repository.onGetDoctorList();
+    public void getResult() {
+       apiResponseLiveData = repository.onGetDoctorList();
     }
 }

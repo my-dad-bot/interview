@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_doctor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/appCompatImageViewProfile"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextViewName"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Name"
+                    android:textColor="#333333"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextViewHospitalName"
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Hospital Name"
+                    android:textColor="#333333"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextViewSpeciality"
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Speciality"
+                    android:textColor="#333333"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

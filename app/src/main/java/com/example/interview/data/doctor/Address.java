@@ -1,5 +1,5 @@
 
-package com.example.interview.models;
+package com.example.interview.data.doctor;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

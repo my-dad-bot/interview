@@ -5,7 +5,7 @@ import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.interview.core.di.network.ApiServices;
-import com.example.interview.models.DoctorResponse;
+import com.example.interview.data.doctor.DoctorResponse;
 
 import javax.inject.Inject;
 
@@ -37,7 +37,7 @@ public class MainActivityRepository {
                     @Override
                     public void onSuccess(DoctorResponse response) {
                         responseLiveData.postValue(response);
-                        Log.d(TAG, "onSuccess: " + response.getDoctors().get(0).getName());
+                        Log.d(TAG, "onSuccess: " + response.getDoctors());
                     }
 
                     @Override

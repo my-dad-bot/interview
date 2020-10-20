@@ -1,6 +1,6 @@
 package com.example.interview.core.di.network;
 
-import com.example.interview.models.DoctorResponse;
+import com.example.interview.data.doctor.DoctorResponse;
 
 import io.reactivex.Single;
 import retrofit2.http.GET;
