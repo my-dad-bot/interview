@@ -1,7 +1,6 @@
 package com.example.interview.ui.feature.landing;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
@@ -11,14 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.interview.R;
 import com.example.interview.core.base.BaseActivity;
-import com.example.interview.data.doctor.Doctor;
-import com.example.interview.data.doctor.DoctorResponse;
+import com.example.interview.data.doctor.remote.DoctorResponse;
 import com.example.interview.databinding.ActivityMainBinding;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.inject.Inject;
+
+import retrofit2.Response;
 
 public class MainActivity extends BaseActivity<MainActivityViewModel> {
 
@@ -51,10 +48,9 @@ public class MainActivity extends BaseActivity<MainActivityViewModel> {
         /*
         * Keeping eye on data passed from ViewModel and binding it with adapter
         * */
-        viewModel.apiResponseLiveData.observe(this, new Observer<DoctorResponse>() {
-            @Override
-            public void onChanged(DoctorResponse doctorResponse) {
-                adapter.setData(doctorResponse.getDoctors());
+        viewModel.apiResponseLiveData.observe(this, doctorResponseResponse -> {
+            if (doctorResponseResponse.body() != null) {
+                adapter.setData(doctorResponseResponse.body().getDoctors());
             }
         });
     }

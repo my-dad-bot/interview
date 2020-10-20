@@ -3,6 +3,7 @@ package com.example.interview.ui.feature.landing;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.interview.core.di.network.ApiServices;
+import com.example.interview.data.database.DoctorDao;
 import com.example.interview.utils.ViewModelProviderFactory;
 
 import dagger.Module;
@@ -23,8 +24,8 @@ public class MainActivityModule {
     }
 
     @Provides
-    MainActivityRepository provideMainActivityRepository(ApiServices apiServices, CompositeDisposable disposable) {
-        return new MainActivityRepository(apiServices, disposable);
+    MainActivityRepository provideMainActivityRepository(ApiServices apiServices, CompositeDisposable disposable, DoctorDao doctorDao) {
+        return new MainActivityRepository(apiServices, disposable, doctorDao);
     }
 
     @Provides

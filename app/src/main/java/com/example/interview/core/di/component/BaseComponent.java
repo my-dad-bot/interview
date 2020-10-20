@@ -30,7 +30,6 @@ public interface BaseComponent extends AndroidInjector<BaseApplication> {
     interface Builder {
         @BindsInstance
         Builder application(Application application);
-
         BaseComponent build();
     }
 }

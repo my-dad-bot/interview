@@ -1,6 +1,5 @@
 package com.example.interview.ui.feature.landing;
 
-import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -10,8 +9,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.interview.R;
-import com.example.interview.data.doctor.Doctor;
-import com.example.interview.data.doctor.DoctorResponse;
+import com.example.interview.data.doctor.remote.Doctor;
 import com.example.interview.databinding.ItemDoctorBinding;
 
 import java.util.ArrayList;

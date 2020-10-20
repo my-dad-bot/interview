@@ -1,5 +1,6 @@
 package com.example.interview.core.di.modules;
 
+import android.app.Application;
 import android.content.Context;
 
 import com.example.interview.core.base.BaseApplication;
@@ -13,9 +14,10 @@ import dagger.Provides;
 
 @Module
 public class AppModule {
+
     @Singleton
     @Provides
-    Context provideContext(BaseApplication application) {
+    Context provideContext(Application application) {
         return application;
     }
 

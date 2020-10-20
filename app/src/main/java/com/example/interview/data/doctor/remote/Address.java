@@ -1,5 +1,5 @@
 
-package com.example.interview.data.doctor;
+package com.example.interview.data.doctor.remote;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -8,7 +8,6 @@ import java.io.Serializable;
 
 public class Address implements Serializable {
 
-    private final static long serialVersionUID = 5424459148976896572L;
     @SerializedName("city")
     @Expose
     private String city;
